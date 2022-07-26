@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*=== FORMATAÇÃO GERAL ===*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 62.5%; /* 1REM = 10PX*/
+
+    --primeiroBackgroundColor: #0CABA8;
+    --segundoBackgroundColor: #008F8C;
+    --outros: #0FC2C0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    background-color: #8AA6A3;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    max-width: 100rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--primeiroBackgroundColor);
+
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+input {
+    display: inline-block;
+    padding: 0.9rem;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    display: inline-block;
+    padding: 0.9rem;
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+
+    background-color: var(--outros);
+    color: white;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+/*=== HEADER ===*/
+.cabecalho {
+    background-color: var(--segundoBackgroundColor);
+    padding: 2rem;
+}
+
+.cabecalho .navegacao ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cabecalho .navegacao ul a li {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/*=== SECTION COTAÇÃO POR DATA ===*/
+#cotacaoData {
+    margin-top: 7rem;
+    padding-inline: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cotacaoData h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#cotacaoData #cotacaoPorData {
+    padding: 2rem 0;
+}
+
+#cotacaoData #cotacaoPorData small {
+    display: block;
+    color: white;
+}
+
+#cotacaoData #cotacaoPorData small strong {
+    color: white;
+}
+
+#cotacaoData #cotacaoPorData #inputCotacaoData {
+    width: 100%;
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#cotacaoData #cotacaoPorData #inputCotacaoData label {
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#cotacaoData #cotacaoPorData #tabelaCotacaoPorDia {
+    background-color: white;
+    margin: 2rem auto;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+
+#cotacaoData #cotacaoPorData #tabelaCotacaoPorDia thead {
+    background-color: gray;
+    color: white;
+}
+
+#cotacaoData #cotacaoPorData #tabelaCotacaoPorDia tbody {
+    font-weight: 500;
+}
+
+#cotacaoData #cotacaoPorData #tabelaCotacaoPorDia th, #cotacaoData #cotacaoPorData #tabelaCotacaoPorDia td {
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+}
+
+#cotacaoData #cotacaoPorData p {
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+#cotacaoData .converterMoeda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 5px solid var(--segundoBackgroundColor);
+}
+
+#cotacaoData .converterMoeda h2 {
+    color: white;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+#cotacaoData .converterMoeda p {
+    color: white;
+    margin-top: 2rem;
+}
+
+#cotacaoData .converterMoeda .converterCompra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 2rem;
+
+    position: relative;
+}
+
+#cotacaoData .converterMoeda .converterCompra p {
+    color: white;
+    font-weight: 500;
+
+    position: absolute;
+    top: 100%;
+
+    margin-top: 1rem;
+}
+
+#cotacaoData .converterMoeda .converterVenda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 4rem;
+
+    position: relative;
+}
+
+#cotacaoData .converterMoeda .converterVenda p {
+    color: white;
+    font-weight: 500;
+
+    position: absolute;
+    top: 100%;
+
+    margin-top: 1rem;
+}
+
+/*=== SECTION COTAÇÃO POR Período ===*/
+#cotacaoPeriodo {
+    margin-top: 8rem;
+    padding: 0 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 5px solid var(--segundoBackgroundColor);
+}
+
+#cotacaoPeriodo h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo .dataInicial {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo .dataInicial label {
+    margin-right: 1rem;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo .dataFinal {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo .dataFinal label {
+    margin-right: 2.5rem;
+}
+
+
+#cotacaoPeriodo #cotacaoPorPeriodo button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo {
+    background-color: white;
+    margin: 2rem auto;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo thead {
+    background-color: gray;
+    color: white;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo tbody {
+    font-weight: 500;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+#cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo th, #cotacaoPeriodo #cotacaoPorPeriodo #tabelaPeriodo td {
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media(max-width: 400px) {
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    table {
+        width: 50%;
+    }
+
+    .cabecalho .navegacao ul a li {
+        font-size: 1rem;
+    }
+
+    #cotacaoData #cotacaoPorData small {
+        font-size: 1.2rem;
+    }
+
+    #cotacaoData #cotacaoPorData #inputCotacaoData {
+        flex-direction: column;
+    }
+
+    #cotacaoData .converterMoeda .converterCompra {
+        flex-direction: column;
+    }
+
+    #cotacaoData .converterMoeda .converterVenda {
+        flex-direction: column;
+    }
+}

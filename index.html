@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cotação do dólar</title>
+</head>
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <nav class="navegacao">
+                <ul>
+                    <a href="#cotacaoData"><li>Contação por Data</li></a>
+                    <a href="#cotacaoPeriodo"><li>Cotação por Período</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="cotacaoData">
+            <h1>Cotação do dólar por dia</h1>
+
+            <div class="cotacaoPorData" id="cotacaoPorData">
+                <small>Às informações sobre a cotação do dolar é atualizado por volta de 13h, <strong>Horário de Brasília</strong></small>
+
+                <div id="inputCotacaoData">
+                    <label for="dataDoDia">Data: </label>
+                    <input type="date" name="dataDoDia" id="dataDoDia">
+                    <button type="button" id="buttonFazBuscaPorData">Pesquisar</button>
+                </div>
+
+                <table id="tabelaCotacaoPorDia">
+                    <thead id="tabelaCotacaoPorDiaThead"></thead>
+                    <tbody id="tabelaCotacaoPorDiaTbody"></tbody>
+                </table>
+
+                <p id="erro"></p>
+            </div>
+
+            <div class="converterMoeda">
+                <h2>Converta à moeda</h2>
+
+                <p>Converta o dólar($) para real(R$)</p>
+
+                <div class="converterCompra">
+                    <input type="number" name="dolar" id="dolarCompra" min="1" placeholder="Converter por compra">
+                    <button type="button" id="buttonCompra">Converter</button>
+                    <p id="paragrafoCompra"></p>
+                </div>
+
+                <div class="converterVenda">
+                    <input type="number" name="dolar" id="dolarVenda" min="1" placeholder="Converter por venda">
+                    <button type="button" id="buttonVenda">Converter</button>
+                    <p id="paragrafoVenda"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cotacaoPeriodo">
+            <h1>Cotação do dólar por período</h1>
+
+            <div id="cotacaoPorPeriodo"> 
+                <div class="dataInicial">
+                    <label for="dataInicialPeriodo">Data inicial: </label>
+                    <input type="date" name="dataPeriodo" id="dataInicialPeriodo">
+                </div>
+
+                <div class="dataFinal">
+                    <label for="dataFinalPeriodo">Data final: </label>
+                    <input type="date" name="dataPeriodo" id="dataFinalPeriodo">
+                </div>
+
+                <button type="button" id="buttonFazBuscaPorPeriodo">Pesquisar</button>
+
+                <table id="tabelaPeriodo">
+                    <thead id="tabelaCotacaoPorPeriodoThead">
+                
+                    </thead>
+                    <tbody id="tabelaCotacaoPorPeriodoTbody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
